@@ -616,7 +616,7 @@ def manimenu():
     # 
     # 
     #  
-    appversion = "1.01"
+    appversion = "1.02"
     sg.theme('DarkBlue17')
     layout = [ [sg.Text("    Please Select Issue Type:                           " , key="feedback", pad=((5,5),(10, 0)), font='Arial 12')],
             
