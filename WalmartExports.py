@@ -77,7 +77,7 @@ def exporta11y():
      
         [sg.Button('Export', font= myTextFont4, size=(25, 1), border_width=3, pad=((250, 5), (10, 5)),
                    button_color=('black', 'green')),
-         sg.Button("Quit", size=(25,1),font= myTextFont4, border_width=3,pad=((20, 5), (10, 5)), 
+         sg.Button("Quit", size=(10,1),font= myTextFont4, border_width=3,pad=((20, 5), (10, 5)), 
                    button_color=('black', 'red'))]
         ]
 
@@ -616,7 +616,7 @@ def manimenu():
     # 
     # 
     #  
-    appversion = "1.02"
+    appversion = "1.01"
     sg.theme('DarkBlue17')
     layout = [ [sg.Text("    Please Select Issue Type:                           " , key="feedback", pad=((5,5),(10, 0)), font='Arial 12')],
             
