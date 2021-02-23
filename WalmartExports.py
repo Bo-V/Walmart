@@ -59,21 +59,21 @@ def exporta11y():
                       button_color=('black', 'lightblue'))],
 
         [sg.Text('Enter the Applause cycle ID:', font=myTextFont3, size=(22, 0), pad=((5, 5), (0, 15))), 
-        sg.Input(key='cycleID', size=(15, 0), font=myInputFont3, pad=((5, 5), (0, 15))),
+        sg.Input(key='cycleID', size=(15, 0), font=myInputFont3, pad=((5, 5), (0, 20))),
 
         sg.Text('Related ticket in Jira (Story):', size=(22, 0), font=myTextFont3, pad=((35, 5), (0, 15))),
-        sg.Input(default_text='CEAQA-xxx',key='story_jira', size=(14, 0), font=myInputFont3, pad=((5, 5), (0, 15))),
+        sg.Input(default_text='CEAQA-xxx',key='story_jira', size=(14, 0), font=myInputFont3, pad=((5, 5), (0, 20))),
         sg.Text()],
 
 
         [sg.Text('Auto-populated labels:', font=myTextFont2, size=(18, 0), pad=((5, 5), (0, 10))),
-        sg.Input(default_text='Applause-Cycle-[XXXXXX] WCAG_[X.X.X] Applause-[Man/Auto]',key='auto_labels', size=(79, 1), font=myInputFont2, pad=((5, 5), (0, 10)))],
+        sg.Input(default_text='Applause-Cycle-[XXXXXX] WCAG_[X.X.X] Applause-[Man/Auto]',key='auto_labels', size=(79, 1), font=myInputFont2, pad=((5, 5), (0, 15)))],
 
         [sg.Text('Check default labels:', size=(17, 0), font=myTextFont2, pad=((5, 5), (0, 10))),
-        sg.Input(default_text='ADA Applause applause_accessibility_cycle',key='standard_labels', size=(80, 1), font=myInputFont2, pad=((5, 5), (0, 10)))],
+        sg.Input(default_text='ADA Applause applause_accessibility_cycle',key='standard_labels', size=(80, 1), font=myInputFont2, pad=((5, 5), (0, 15)))],
 
         [sg.Text('Labels separated by space:', size=(22, 0), font=myTextFont2, pad=((5, 5), (0, 10))),
-        sg.Input(default_text=' ',key='labels_from_jira', size=(74, 0), font=myInputFont2, pad=((5, 5), (0, 10)))],
+        sg.Input(default_text=' ',key='labels_from_jira', size=(74, 0), font=myInputFont2, pad=((5, 5), (0, 15)))],
      
         [sg.Button('Export', font= myTextFont4, size=(25, 1), border_width=3, pad=((250, 5), (10, 5)),
                    button_color=('black', 'green')),
@@ -622,7 +622,7 @@ def manimenu():
             
             [sg.Button("A11y Issues", size=(35,1),font='Arial 12', border_width=3,pad=(105, 20),
                        button_color=('black', 'lightblue'))],
-            [sg.Button("Fn Glass Issues", size=(35,1),font='Arial 12', border_width=3,pad=(105, 8), 
+            [sg.Button("Fn Issues", size=(35,1),font='Arial 12', border_width=3,pad=(105, 8), 
                        button_color=('black', 'lightblue'))],
             [sg.Button("QUIT", size=(15,1),font='Arial 12', border_width=3,pad=(160, 40), 
                        button_color=('black', 'red'))]
