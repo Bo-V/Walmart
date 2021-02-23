@@ -431,7 +431,7 @@ def exportGlass():
             [sg.Submit(),
             sg.Exit()]]
 
-    window = sg.Window('Walmart Fn Glass Exporter',
+    window = sg.Window('Walmart Fn Exporter',
                     layout)
 
     while True:
@@ -643,7 +643,7 @@ def manimenu():
         if event == ('A11y Issues'):
             window.close()
             exporta11y()
-        if event == ('Fn Glass Issues'):
+        if event == ('Fn Issues'):
             window.close()
             exportGlass()
         if event in (None, 'QUIT'):
