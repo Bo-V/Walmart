@@ -456,7 +456,7 @@ def exportGlass():
             cycle = values['cycleID']
             
             xlsx_file = cycle + 'tempfile.xlsx'
-            os.remove('tempfile.xlsx')
+            #os.remove('tempfile.xlsx')
             pd.read_csv(csv_file).to_excel(xlsx_file, engine='xlsxwriter')
             df = pd.read_excel(xlsx_file)
             df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('(', '').str.replace(')', '').str.replace('?', '')
