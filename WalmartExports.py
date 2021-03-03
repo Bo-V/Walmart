@@ -356,7 +356,10 @@ def exporta11y():
         
         # Sorts sheet on Priority column
         #jira_import = jira_import.sort_values(by=['priority'])
-
+        
+        # Sorts sheet on bug_id column
+        jira_import = jira_import.sort_values(by=['bug_id'])
+        
         # Use these output files for import
         
         
