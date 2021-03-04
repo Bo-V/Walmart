@@ -142,6 +142,7 @@ def exporta11y():
         dfman_auto = df['caught_with_automation']
         autoy = ' Applause_Auto'
         auton = ' Applause-Man'
+        autona = ' N/A'
         #print(len(dfman_auto))
         man_auto1 = [None] * len(dfman_auto)
         labels = [None] * len(dfman_auto)
@@ -155,12 +156,19 @@ def exporta11y():
                 labels[i] = auto_labels + ' ' + values['standard_labels'] + ' ' + values['labels_from_jira']   
             #    print(labels[i]) 
             
-            if dfman_auto[i] == 'No':
+            elif dfman_auto[i] == 'No':
                 man_auto1[i] = auton
                 #    print(str(man_auto1[i])) 
                 story_jira = ' ' + values['story_jira']
                 auto_labels = 'Applause-Cycle-' + cycle + str(man_auto1[i]) + story_jira
-                labels[i] = auto_labels + ' ' + values['standard_labels'] + ' ' + values['labels_from_jira']   
+                labels[i] = auto_labels + ' ' + values['standard_labels'] + ' ' + values['labels_from_jira']
+            else:
+                man_auto1[i] = auton
+                #    print(str(man_auto1[i])) 
+                story_jira = ' ' + values['story_jira']
+                auto_labels = 'Applause-Cycle-' + cycle + str(man_auto1[i]) + story_jira
+                labels[i] = auto_labels + ' ' + values['standard_labels'] + ' ' + values['labels_from_jira']                
+
                 #    print(labels[i])
                 
                 # we're pulling just our ID and attachment columns to split them into their own columns
